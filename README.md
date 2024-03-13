@@ -1,4 +1,6 @@
 # pyDllProxy
+<img width="360" alt="2024-03-13 13_36_30-ChatGPT y 4 páginas más - Trabajo_ Microsoft​ Edge" src="https://github.com/NtMerk/pyDLLProxy/assets/19492870/5ca7fa09-d82c-4d40-a9e0-2ee542cb4488">
+
 pyDLLProxy is a Python tool that intends to aid the development of DLL Proxying attacks. It creates the C/C++ directives necessary for a DLL to proxy the exports to the original DLL. This way, an attacker can craft a malicious DLL that proxies function calls to the original, while executing any desired malicious code.
 
 ## Installation
