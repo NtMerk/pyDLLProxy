@@ -53,7 +53,7 @@ def parse_dll(dll_path, new_name):
     pe = pefile.PE(dll_path)
     print("[+] Parsing DLL at", dll_path)
     pe.parse_data_directories(directories=[pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_EXPORT"]])
-    print("[+] Found", len(pe.DIRECTORY_ENTRY_EXPORT.symbols), "exports.")
+    print("[+] Found", len(pe.DIRECTORY_ENTRY_EXPORT.symbols), "exports.\n")
     
     for export in pe.DIRECTORY_ENTRY_EXPORT.symbols:
         dll_directives.append(convert_to_directive(export.name.decode(), dll_path, new_name))
@@ -69,7 +69,7 @@ def main():
             os.makedirs(output)
             print("[+] Creating template files")
             chosen_template = args.template
-            with open(os.path.abspath(output) + "/" + output + chosen_template, 'w') as f: f.write(build_template())
+            with open(os.path.abspath(output) + "/" + output + "." + chosen_template, 'w') as f: f.write(build_template())
             new_name = args.dll_new_name
             if new_name.lower().endswith(".dll"):
                 new_name = os.path.splitext(args.dll_new_name)[0]
