@@ -8,7 +8,7 @@ Clone repository
 ```sh
 git clone https://github.com/ntmerk/pyDLLProxy.git
 ```
-Go to pycrack folder
+Go to pyDLLProxy folder
 ```sh
 cd pyDLLProxy
 ```
